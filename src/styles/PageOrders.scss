@@ -1,0 +1,66 @@
+@import "./styles.scss";
+
+.Orders {
+  width: 100vw;
+  height: 100vh;
+}
+
+.Orders > div {
+  display: inline-block;
+}
+
+
+// Left
+.Orders-left {
+  width: 11vw;
+  height: calc(100vh - 8vw);
+  padding: 4vw 0 0 4vw;
+  margin-right: 2vw;
+}
+
+.Order-Summ-List {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.Order-Summ-List > * {
+  margin: 0 0 1.5vw 0;
+}
+
+.Order-Summ-List > *:last-child {
+  margin: 0;
+}
+
+
+// Right
+.Orders-right {
+  width: 79vw;
+  height: calc(100vh - 8vw);
+}
+
+.Order-info {
+  height: 2vw;
+  position: relative;
+  margin-bottom: 2.5vw;
+}
+
+.Order-info > img {
+  height: 100%;
+  margin-right: 0.9vw;
+  display: inline-block;
+}
+
+.Order-info > div {
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  display: inline-block;
+  font-size: 0.6em;
+  font-weight: 500;
+  color: $gray600;
+}
+
+.Order-List {
+  height: calc(100% - 4.5vw);
+}

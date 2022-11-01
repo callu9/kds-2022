@@ -1,0 +1,32 @@
+@import "./styles.scss";
+
+
+.order-summary {
+  position: relative;
+  display: inline-block;
+  background-color: $gray100;
+  border-radius: 1vw;
+  width: 11vw;
+  height: 11vw;
+}
+
+.order-summary > div {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1.5vw;
+}
+
+.left, .right {
+  font-size: 0.7em;
+  display: inline-block;
+  margin-right: 0.5vw;
+  color: $gray600;
+  font-weight: 300;
+}
+
+.right {
+  color: $indigo200;
+  font-weight: 700;
+  margin-right: 0;
+}

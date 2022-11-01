@@ -1,0 +1,201 @@
+@import "./styles.scss";
+
+.Order-List {
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.Order-List > * {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+//
+// Order.js
+//
+.order-high {
+  position: relative;
+  width: 22vw;
+  height: 100%;
+}
+
+// Order Header
+.header {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  right: 0%;
+  height: 16%;
+  color: $gray100;
+  background: $indigo999;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.order-num {
+  margin: 1vw 0 0 1vw;
+  font-weight: 700;
+  font-size: 1.4em;
+  color: $indigo000;
+}
+
+.order-time {
+  margin: 0 0 0 1vw;
+  font-weight: 400;
+  font-size: 0.6em;
+  color: $gray100;
+}
+
+.btn-larger {
+  position: absolute;
+  top: 1vw;
+  right: 1vw;
+  width: 1.5vw;
+  height: 1.5vw;
+}
+
+.btn-larger > img {
+  width: 100%;
+}
+
+.timer {
+  position: absolute;
+  right: 1vw;
+  bottom: 0.5vw;
+  font-size: 0.95em;
+  font-weight: 700;
+  color: $yellow400;
+}
+
+// Order Body
+.order-high > .body {
+  position: absolute;
+  top: 16%;
+  left: 0%;
+  right: 0%;
+  height: 100%;
+
+  background: $gray100;
+}
+
+.body-list {
+  padding: 1vw;
+}
+
+.body-item-order {
+  padding: 1vw 0 1vw 0;
+  border-bottom: 0.2vh solid $gray300;
+}
+
+.body-item-order:last-child {
+  border-bottom: 0px;
+}
+
+.body-item-order-menu > div {
+  display: inline-block;
+}
+
+.menu-name {
+  font-weight: 700;
+  font-size: 0.85em;
+  color: $gray600;
+  margin-bottom: 0.4vw;
+}
+
+.body-item-order-menu > .right {
+  float: right;
+}
+
+.right > * {
+  display: inline-block;
+}
+
+.right > .menu-cnt {
+  font-weight: 700;
+  font-size: 0.85em;
+  color: $gray600;
+}
+
+.right > .menu-print {
+  margin-left: 3vw;
+  width: 1vw;
+  height: 1vw;
+}
+
+.menu-print > img {
+  width: 100%;
+}
+
+.menu-detail-area {
+  position: relative;
+}
+
+.menu-detail-area > div {
+  display: inline-block;
+}
+
+.menu-detail-icon {
+  margin-right: 0.5vw;
+  width: 1.2vw;
+  height: 1.2vw;
+}
+
+.menu-detail-icon > img {
+  width: 100%;
+}
+
+.menu-detail {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 400;
+  font-size: 0.7em;
+  color: $indigo200;
+}
+
+// Order Footer
+.order-high > .footer {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  bottom: 0;
+  height: 10%;
+
+  background: $gray100;
+  border-radius: 0px 0px 10px 10px;
+  padding: 0 10px 0 10px;
+}
+
+.footer > .btn-area {
+  padding: 0.8vw 0 0.8vw 0;
+  border-top: 0.2vh solid #b8b8b8;
+}
+
+.btn-print {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.5vw;
+  height: 1.5vw;
+}
+
+.btn-print > img {
+  width: 100%;
+}
+
+.btn-complete {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  right: 1vw;
+  padding: 0.6vw;
+
+  background: $indigo999;
+  border-radius: 5px;
+
+  font-weight: 700;
+  font-size: 0.6em;
+  text-align: center;
+  color: white;
+}
