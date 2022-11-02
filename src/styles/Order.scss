@@ -1,14 +1,12 @@
 @import "./styles.scss";
 
 .Order-List-hor {
-  height: calc(100% - 4vw);
   overflow: hidden;
   overflow-x: auto;
   white-space: nowrap;
 }
 
 .Order-List-ver {
-  height: calc(100% - 4vw);
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -53,7 +51,7 @@
   height: 13vh;
   color: $gray100;
   background: $indigo999;
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 1vw 1vw 0px 0px;
 }
 
 .order-num {

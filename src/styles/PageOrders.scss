@@ -45,7 +45,7 @@
   margin-bottom: 2vw;
 }
 
-.Order-info-left > img {
+.Order-info-left img {
   height: 100%;
   margin-right: 0.9vw;
   display: inline-block;
@@ -76,6 +76,6 @@
   height: 100%;
 }
 
-.Order-List {
-  height: calc(100% - 4.5vw);
+.Order-List-ver, .Order-List-hor {
+  height: calc(100% - 4vw);
 }

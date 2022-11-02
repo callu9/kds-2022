@@ -1,4 +1,5 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import storage from "../storage";
 import "../styles/PageOrders.scss";
@@ -46,7 +47,9 @@ export default function Orders() {
       <div className="Orders-right">
         <div className="Order-info">
           <div className="Order-info-left">
-            <img src={goBack} alt="icon-back" />
+            <Link to="/">
+              <img src={goBack} alt="icon-back" />
+            </Link>
             <div>
               2022-00-00 00:00:00 | 점포코드 | KDS-01 | 직원코드 | v.1.0.1
             </div>
@@ -73,7 +76,7 @@ export default function Orders() {
             )}
           </div>
         </div>
-        <div className={wideFlag? "Order-List-ver" : "Order-List-hor"}>
+        <div className={wideFlag ? "Order-List-ver" : "Order-List-hor"}>
           {orders.map((order, index) => (
             <Order key={index} wideFlag={wideFlag} data={order} />
           ))}
