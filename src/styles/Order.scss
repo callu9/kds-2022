@@ -1,14 +1,14 @@
 @import "./styles.scss";
 
 .Order-List-hor {
-  height: calc(100% - 4.5vw);
+  height: calc(100% - 4vw);
   overflow: hidden;
   overflow-x: auto;
   white-space: nowrap;
 }
 
 .Order-List-ver {
-  height: calc(100% - 4.5vw);
+  height: calc(100% - 4vw);
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -33,11 +33,15 @@
   display: inline-block;
   position: relative;
   width: calc((79vw - 4.5vw) / 3);
-  height: 60%;
+  height: 50vh;
 }
 
 .order-wide:nth-child(3n) {
   margin-right: 0;
+}
+
+.order-wide:nth-last-child(2), .order-wide:last-child {
+  margin-bottom: 0;
 }
 
 // Order Header
@@ -46,7 +50,7 @@
   top: 0;
   left: 0%;
   right: 0%;
-  height: 16%;
+  height: 13vh;
   color: $gray100;
   background: $indigo999;
   border-radius: 10px 10px 0px 0px;
@@ -90,10 +94,10 @@
 // Order Body
 .body {
   position: absolute;
-  top: 16%;
+  top: 13vh;
   left: 0%;
   right: 0%;
-  height: 80%;
+  height: calc(100% - 14vh);
 
   background: $gray100;
 }
@@ -190,7 +194,7 @@
   left: 0%;
   right: 0%;
   bottom: 0;
-  height: 5vw;
+  height: 6.3vh;
 
   background: $gray100;
   border-radius: 0 0 1vw 1vw;
