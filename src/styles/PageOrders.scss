@@ -39,19 +39,19 @@
   height: calc(100vh - 8vw);
 }
 
-.Order-info {
+.Order-info-left {
   height: 2vw;
   position: relative;
   margin-bottom: 2.5vw;
 }
 
-.Order-info > img {
+.Order-info-left > img {
   height: 100%;
   margin-right: 0.9vw;
   display: inline-block;
 }
 
-.Order-info > div {
+.Order-info-left > div {
   top: 50%;
   transform: translateY(-50%);
   position: absolute;
@@ -59,6 +59,21 @@
   font-size: 0.6em;
   font-weight: 500;
   color: $gray600;
+}
+
+.Order-info-right {
+  position: absolute;
+  top: 4vw;
+  right: 4vw;
+  height: 2vw;
+}
+
+.Order-info-right > div {
+  height: 2vw;
+}
+
+.Order-info-right img {
+  height: 100%;
 }
 
 .Order-List {

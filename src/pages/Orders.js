@@ -1,13 +1,21 @@
-import react from "react";
+import React, {useState} from "react";
+
 import storage from "../storage";
-import "../styles/Order.scss";
 import "../styles/PageOrders.scss";
+import "../styles/Order.scss";
+
 import goBack from "../images/arrow.png";
+import highInactive from "../images/high-inactive.png";
+import highActive from "../images/high-active.png";
+import wideInactive from "../images/wide-inactive.png";
+import wideActive from "../images/wide-active.png";
 
 import Order from "../component/order/Order";
 import OrderSummary from "../component/order/OrderSummary";
 
 export default function Orders() {
+  const [wideFlag, setWideFlag] = useState(false);
+
   const orders = storage.orders;
 
   const sum = orders.map(function (o) {
@@ -37,14 +45,37 @@ export default function Orders() {
       </div>
       <div className="Orders-right">
         <div className="Order-info">
-          <img src={goBack} alt="icon-back" />
-          <div>
-            2022-00-00 00:00:00 | 점포코드 | KDS-01 | 직원코드 | v.1.0.1
+          <div className="Order-info-left">
+            <img src={goBack} alt="icon-back" />
+            <div>
+              2022-00-00 00:00:00 | 점포코드 | KDS-01 | 직원코드 | v.1.0.1
+            </div>
+          </div>
+          <div className="Order-info-right">
+            {wideFlag ? (
+              <div>
+                <img
+                  src={highInactive}
+                  alt="icon-high"
+                  onClick={() => setWideFlag(!wideFlag)}
+                />
+                <img src={wideActive} alt="icon-wide" />
+              </div>
+            ) : (
+              <div>
+                <img src={highActive} alt="icon-high" />
+                <img
+                  src={wideInactive}
+                  alt="icon-wide"
+                  onClick={() => setWideFlag(!wideFlag)}
+                />
+              </div>
+            )}
           </div>
         </div>
-        <div className="Order-List">
+        <div className={wideFlag? "Order-List-ver" : "Order-List-hor"}>
           {orders.map((order, index) => (
-            <Order key={index} wideFlag={false} data={order} />
+            <Order key={index} wideFlag={wideFlag} data={order} />
           ))}
         </div>
       </div>

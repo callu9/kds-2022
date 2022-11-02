@@ -1,23 +1,43 @@
 @import "./styles.scss";
 
-.Order-List {
+.Order-List-hor {
+  height: calc(100% - 4.5vw);
   overflow: hidden;
   overflow-x: auto;
   white-space: nowrap;
 }
 
-.Order-List > * {
-  display: inline-block;
-  margin-right: 15px;
+.Order-List-ver {
+  height: calc(100% - 4.5vw);
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 //
 // Order.js
 //
+.order-high, .order-wide {
+  display: inline-block;
+}
+
 .order-high {
+  margin-right: 1.25vw;
   position: relative;
   width: 22vw;
   height: 100%;
+}
+
+.order-wide {
+  margin-bottom: 2.25vw;
+  margin-right: 2.25vw;
+  display: inline-block;
+  position: relative;
+  width: calc((79vw - 4.5vw) / 3);
+  height: 60%;
+}
+
+.order-wide:nth-child(3n) {
+  margin-right: 0;
 }
 
 // Order Header
@@ -68,12 +88,12 @@
 }
 
 // Order Body
-.order-high > .body {
+.body {
   position: absolute;
   top: 16%;
   left: 0%;
   right: 0%;
-  height: 100%;
+  height: 80%;
 
   background: $gray100;
 }
@@ -83,7 +103,7 @@
 }
 
 .body-item-order {
-  padding: 1vw 0 1vw 0;
+  padding: 0.5vw 0 0.5vw 0;
   border-bottom: 0.2vh solid $gray300;
 }
 
@@ -99,7 +119,12 @@
   font-weight: 700;
   font-size: 0.85em;
   color: $gray600;
-  margin-bottom: 0.4vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.body-item-order-menu > .left {
+  min-width: 60%;
 }
 
 .body-item-order-menu > .right {
@@ -127,7 +152,9 @@
 }
 
 .menu-detail-area {
+  margin-top: 0.4vw;
   position: relative;
+  height: 1.2vw;
 }
 
 .menu-detail-area > div {
@@ -135,35 +162,39 @@
 }
 
 .menu-detail-icon {
+  position: relative;
   margin-right: 0.5vw;
-  width: 1.2vw;
   height: 1.2vw;
 }
 
 .menu-detail-icon > img {
-  width: 100%;
+  height: 100%;
 }
 
 .menu-detail {
+  width: 100%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   font-weight: 400;
   font-size: 0.7em;
   color: $indigo200;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 // Order Footer
-.order-high > .footer {
+.footer {
   position: absolute;
   left: 0%;
   right: 0%;
   bottom: 0;
-  height: 10%;
+  height: 5vw;
 
   background: $gray100;
-  border-radius: 0px 0px 10px 10px;
-  padding: 0 10px 0 10px;
+  border-radius: 0 0 1vw 1vw;
+  padding: 0 1vw 0 1vw;
 }
 
 .footer > .btn-area {
