@@ -17,7 +17,7 @@ import OrderSummary from "../component/order/OrderSummary";
 export default function Orders() {
   const [wideFlag, setWideFlag] = useState(false);
 
-  const orders = storage.orders;
+  const orders = storage.orders.filter(o => o.status===0);
 
   const sum = orders.map(function (o) {
     return {

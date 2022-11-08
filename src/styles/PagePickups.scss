@@ -1,0 +1,117 @@
+@import "./styles.scss";
+
+.Pickups {
+  margin: 3.5vw; 
+}
+
+.Pickups > div {
+  width: calc((100vw - 7vw - 2.3vw - 8vw) / 2);
+  height: calc(100% - 7vw - 4vw);
+}
+
+.goback {
+  position: absolute;
+  left: 1vw;
+  top: 1vw;
+}
+
+.goback img {
+  width: 2vw;
+}
+
+.not-ready {
+  float: left;
+  position: absolute;
+  background-color: $gray100;
+  color: $gray500;
+  padding: 2vw;
+}
+
+.ready {
+  right: 3.5vw;
+  position: absolute;
+  background-color: $indigo999;
+  color: $gray300;
+  padding: 2vw;
+}
+
+.not-ready > div, .ready > div {
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.hr-style {
+  height: 0.3vw;
+  margin: 0.5vw 0 1.5vw 0;
+  border : 0;
+}
+
+.not-ready > hr {
+  @extend .hr-style;
+  background-color : $gray500;
+}
+
+.ready > hr {
+  @extend .hr-style;
+  background-color : $gray300;
+}
+
+.order-no-list > div {
+  margin-bottom: 1vw;
+}
+
+.order-no-list-item {
+  padding: 1vw 0.5vw 1vw 1.5vw;
+  background-color: $gray200;
+  border-radius: 1vw;
+}
+
+.order-no-list-item > .left {
+  font-weight: 700;
+  font-size: 1.2em;
+  color: $indigo999;
+}
+
+.order-no-list-item > .right {
+  float: right;
+}
+
+.ready .order-no-list-item {
+  background-color: #393C7D;
+}
+
+.ready .left {
+  color: $yellow400;
+}
+
+
+.btn-style {
+  margin: 0.35vw 0.5vw 0.35vw 0.5vw;
+  padding: 0.4vw 0.6vw 0.4vw 0.6vw;
+  font-weight: 700;
+  font-size: 1em;
+  color: white;
+  text-align: center;
+  border-radius: 1vw;
+  background-color: $gray400;
+}
+
+.btn-del {
+  @extend .btn-style;
+}
+
+.ready .btn-del {
+  background-color: $indigo999;
+}
+
+.btn-call {
+  @extend .btn-style;
+}
+
+.not-ready .btn-call {
+  background-color: $indigo999;
+}
+
+.ready .btn-call {
+  background-color: #6265AE;
+}
